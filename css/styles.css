@@ -15,7 +15,7 @@ ul, ol {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 117%;
+    line-height: 1.7;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
@@ -49,6 +49,10 @@ ul, ol {
     padding: 24px 0;
     position: relative;
     transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-information-three {
+    color: #2e2f42;
 }
 
 .nav-information-two::after {
@@ -296,12 +300,6 @@ li, ol, ul {
     padding-left: 0;
 }
 
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -319,7 +317,7 @@ li, ol, ul {
 }
 
 .adress-information-title {
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -334,7 +332,7 @@ li, ol, ul {
 }
 
 .navigation-list {
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -355,6 +353,7 @@ li, ol, ul {
 
 .list-our-goal {
     display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -363,17 +362,13 @@ li, ol, ul {
     display: none;
 }
 
-.list-one {
-    width: calc((100% - 72px) / 4);
-}
-
 .list-our-team {
     display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
 .our-name {
-    width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background-color: #FFFFFF;
@@ -391,7 +386,6 @@ li, ol, ul {
 }
 
 .list-programs {
-    width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -442,6 +436,7 @@ li, ol, ul {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 .visually-hidden {
@@ -482,7 +477,7 @@ img {
 }
 
 .icon-svg {
-    display: flex;
+    display: none;
     border-radius: 4px;
     width: 264px;
     height: 112px;
@@ -533,11 +528,14 @@ img {
 
 .container-three {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    gap: 60px;
 }
 
 .footer-container {
     margin-right: 120px;
+    margin-bottom: 72px;
+    margin: 0 auto;
 }
 
 .footer-paragraph {
@@ -734,6 +732,7 @@ input {
     width: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
 }
 
 .modal {
@@ -969,6 +968,268 @@ textarea::placeholder {
     font-weight: 400;
 }
 
-.is-open {
-    opacity: 1;
+/* ---------- Modal menu ----------- */
+
+.modal-container-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 250ms ease-in-out;
+    opacity: 0;
 }
+
+.modal-menu {
+    background: #fff;
+    width: 320px;
+    height: 640px;
+    overflow-y: 640px;
+}
+
+.modal-button-menu {
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 272px;   
+}
+
+.list-modal-menu {
+    margin-top: 72px;
+    margin-left: 16px;
+    gap: 40px;
+}
+
+.nav-information-menu {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+.nav-information-menu:hover {
+    color: #404bbf;
+} 
+
+.adress-modal-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-left: 16px;
+    margin-bottom: 48px;
+    margin-top: 60px;
+}
+
+.adress-information-menu {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-decoration: none;
+}
+
+.icon-title-menu {
+    display: flex;
+    gap: 40px;
+    margin-left: 16px;
+}
+
+/* ---------- Modal menu ----------- */
+
+/* --------- Mobile adaptive --------- */
+
+.container {
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+
+.our-goal-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.menu-list {
+    display: flex;
+}
+
+/* ----------------- Tablet adaptive ------------------- */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .icon-svg {
+        display: none;
+    }
+
+    .list-our-goal {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .list-one {
+        width: calc((100% - 24px) / 2);
+   }
+
+   .our-goal-title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+   }
+
+   .our-goal-information {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+   }
+
+   .list-our-team {
+        flex-direction: row;
+        flex-wrap: wrap;
+   }
+
+   .our-name {
+        width: calc((100% - 24px) / 2);
+   }
+
+   .list-portfolio {
+        flex-direction: row;
+        flex-wrap: wrap;
+   }
+
+   .list-programs {
+        width: calc((100% - 24px) / 2);
+   }
+
+   .container-three {
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: 456px;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .footer-subs-container {
+       margin-left: 0;
+   }
+
+   .footer-container {
+       margin-right: 24px;
+   }
+
+   .adress-information-title {
+       flex-direction: row;
+       flex-wrap: wrap;
+       display: inline;
+   }
+
+   .menu-list {
+    display: none;
+   }
+
+   .navigation-list {
+    display: flex;
+   }
+}
+
+/* ------------------- Tablet adaptive ------------------ */
+
+
+/* ------------------- Dekstop adaptive ----------------------------- */
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .adress-information-title{
+        display: flex;
+    }
+
+    .icon-svg {
+        display: flex;
+    }
+
+    .list-our-goal {
+        flex-wrap: nowrap;
+    }
+
+    .our-goal-title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    .our-goal-information {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .list-our-team {
+        flex-wrap: nowrap;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .list-programs {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .container-three {
+        height: 312px;
+    }
+
+    .footer-container {
+        margin-right: 120px;
+    }
+
+    .footer-subs-container {
+        margin-left: 80px;
+    }
+
+        .menu-list {
+            display: none;
+        }
+    
+        .navigation-list {
+            display: flex;
+        }
+
+        .container-three {
+           display: flex;
+           align-items: baseline;
+        }
+}
+
+/* ------------------- Dekstop adaptive --------------------------- */
