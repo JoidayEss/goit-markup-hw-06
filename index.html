@@ -27,11 +27,6 @@
           <a class="logo-word" href="./index.html"
             >Web<span class="logo">Studio</span></a
           >
-          <div class="menu-list">
-            <svg height="24" width="24">
-              <use href="./images/icons.svg#icon-heroicons"></use>
-            </svg>
-          </div>
           <ul class="navigation-list">
             <li class="list-navigation">
               <a class="nav-information nav-information-two" href="./index.html"
@@ -64,6 +59,11 @@
             </li>
           </ul>
         </address>
+        <button class="menu-list" type="button">
+          <svg height="24" width="24">
+            <use href="./images/icons.svg#icon-heroicons"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Main content -->
@@ -75,7 +75,7 @@
         </div>
       </section>
       <!-- Our goal -->
-      <section class="section">
+      <section class="section section-four">
         <div class="container">
           <h2 class="visually-hidden">Our advantages</h2>
           <ul class="list-our-goal">
@@ -132,12 +132,13 @@
       </section>
       <!-- Our Team -->
       <section class="section section-two">
-        <div class="container">
+        <div class="container container-team">
           <h2 class="our-team">Our Team</h2>
           <ul class="list-our-team">
             <li class="our-name">
               <img
                 class="photo-our-team"
+                srcset="./images/MarkGuerrero.jpg 1x, ./images/img.jpg 2x"
                 src="./images/MarkGuerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -183,6 +184,7 @@
             </li>
             <li class="our-name">
               <img
+                srcset="./images/TomFord.jpg 1x, ./images/img1.jpg 2x"
                 class="photo-our-team"
                 src="./images/TomFord.jpg"
                 alt="Tom Ford"
@@ -229,6 +231,7 @@
             </li>
             <li class="our-name">
               <img
+                srcset="./images/CamilaGarcia.jpg 1x, ./images/img2.jpg 2x"
                 class="photo-our-team"
                 src="./images/CamilaGarcia.jpg"
                 alt="Camila Garcia"
@@ -275,6 +278,7 @@
             </li>
             <li class="our-name">
               <img
+                srcset="./images/DanielWilson.jpg 1x, ./images/img3.jpg 2x"
                 class="photo-our-team"
                 src="./images/DanielWilson.jpg"
                 alt="Daniel Wilson"
@@ -323,13 +327,18 @@
         </div>
       </section>
       <!-- Our Portfolio -->
-      <section class="section">
+      <section class="section section-three">
         <div class="container">
           <h2 class="title-our-portfolio">Our Portfolio</h2>
           <ul class="list-portfolio">
             <li class="list-programs">
               <div class="image-container">
-                <img src="./images/Banking.jpg" alt="Banking App" width="360" />
+                <img
+                  srcset="./images/Banking.jpg 1x, ./images/img4.jpg 2x"
+                  src="./images/Banking.jpg"
+                  alt="Banking App"
+                  width="360"
+                />
                 <p class="text-paragraph">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -344,6 +353,7 @@
             <li class="list-programs">
               <div class="image-container">
                 <img
+                  srcset="./images/Cashless.jpg 1x, ./images/img5.jpg 1x"
                   src="./images/Cashless.jpg"
                   alt="Cashless Payment"
                   width="360"
@@ -362,6 +372,7 @@
             <li class="list-programs">
               <div class="image-container">
                 <img
+                  srcset="./images/Meditation.jpg 1x, ./images/img6.jpg 2x"
                   src="./images/Meditation.jpg"
                   alt="Meditation App"
                   width="360"
@@ -379,7 +390,12 @@
             </li>
             <li class="list-programs">
               <div class="image-container">
-                <img src="./images/Taxi.jpg" alt="Taxi Service" width="360" />
+                <img
+                  srcset="./images/Taxi.jpg 1x, ./images/img7.jpg 1x"
+                  src="./images/Taxi.jpg"
+                  alt="Taxi Service"
+                  width="360"
+                />
                 <p class="text-paragraph">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -394,6 +410,7 @@
             <li class="list-programs">
               <div class="image-container">
                 <img
+                  srcset="./images/Screen.jpg 1x, ./images/img8.jpg 2x"
                   src="./images/Screen.jpg"
                   alt="Screen Illustrations"
                   width="360"
@@ -412,6 +429,7 @@
             <li class="list-programs">
               <div class="image-container">
                 <img
+                  srcset="./images/Online.jpg 1x, ./images/img9.jpg 2x"
                   src="./images/Online.jpg"
                   alt="Online Courses"
                   width="360"

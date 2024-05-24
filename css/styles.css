@@ -337,7 +337,8 @@ li, ol, ul {
 }
 
 .section-one {
-    padding: 188px 0;
+    padding-bottom: 96px;
+    padding-top: 56px;
     background-color: #2E2F42;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -351,10 +352,20 @@ li, ol, ul {
     margin: 0 auto;
 }
 
+@media (min-resolution: 192dpi) {
+    .section-one {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Dark-bg.jpg);  
+    }
+}
+
 .list-our-goal {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 72px;
 }
 
 .visually-hidden {
@@ -365,7 +376,7 @@ li, ol, ul {
 .list-our-team {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 72px;
 }
 
 .our-name {
@@ -383,6 +394,12 @@ li, ol, ul {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+}
+
+.section-three {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    gap: 48px;
 }
 
 .list-programs {
@@ -474,6 +491,8 @@ img {
 
 .section-two {
     background-color: #F4F4FD;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .icon-svg {
@@ -528,8 +547,9 @@ img {
 
 .container-three {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 60px;
+    justify-content: center;
 }
 
 .footer-container {
@@ -545,6 +565,7 @@ img {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-list {
@@ -583,6 +604,7 @@ input {
 
 .footer-form {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -623,6 +645,7 @@ input {
     color: #ffff;
     cursor: pointer;
     border: none;
+    margin: 0 auto;
 }
 
 .footer-svg-icon {
@@ -630,7 +653,7 @@ input {
 }
 
 .footer-subs-container {
-    margin-left: 80px;
+    text-align: center;
 }
 
 .modal-button {
@@ -733,6 +756,7 @@ input {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
@@ -974,9 +998,7 @@ textarea::placeholder {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 0;;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -1071,6 +1093,7 @@ textarea::placeholder {
 
 .menu-list {
     display: flex;
+    border: none;
 }
 
 /* ----------------- Tablet adaptive ------------------- */
@@ -1085,12 +1108,15 @@ textarea::placeholder {
     }
 
     .list-our-goal {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 72px;
     }
 
     .list-one {
-        width: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
    }
 
    .our-goal-title {
@@ -1098,6 +1124,7 @@ textarea::placeholder {
         font-weight: 700;
         line-height: 1.1;
         letter-spacing: 0.02em;
+        text-align: left;
    }
 
    .our-goal-information {
@@ -1106,9 +1133,20 @@ textarea::placeholder {
         letter-spacing: 0.02em;
    }
 
+   .section-two {
+        padding-top: 96px;
+        padding-bottom: 96px;
+   }
+
+   .container-team {
+        width: 584px;
+   }
+
    .list-our-team {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 64px;
    }
 
    .our-name {
@@ -1127,17 +1165,12 @@ textarea::placeholder {
    .container-three {
        flex-direction: row;
        flex-wrap: wrap;
-       height: 456px;
-       justify-content: center;
-       align-items: center;
+       width: 584px;
    }
 
    .footer-subs-container {
        margin-left: 0;
-   }
-
-   .footer-container {
-       margin-right: 24px;
+       text-align: left;
    }
 
    .adress-information-title {
@@ -1152,6 +1185,34 @@ textarea::placeholder {
 
    .navigation-list {
     display: flex;
+   }
+
+   .section-one {
+    padding-bottom: 96px;
+    padding-top: 72px;
+   }
+
+   .teg-adress {
+    margin-right: 16px;
+   }
+
+   .adress-information {
+    line-height: 1.7;
+    color: #434455;
+   }
+
+   .section-four {
+    padding-top: 96px;
+    padding-bottom: 96px
+   }
+
+   .section-three {
+    padding-top: 96px;
+    padding-bottom: 96px;
+   }
+
+   .footer-paragraph {
+    text-align: left;
    }
 }
 
@@ -1175,14 +1236,27 @@ textarea::placeholder {
         display: flex;
     }
 
+    .section-one {
+        padding-bottom: 120px;
+        padding-top: 240px;
+    }
+
+    .section-four {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
     .list-our-goal {
-        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-flow: nowrap;
+        gap: 24px;
     }
 
     .our-goal-title {
         font-size: 20px;
         line-height: 1.2;
         font-weight: 500;
+        text-align: left;
     }
 
     .our-goal-information {
@@ -1191,8 +1265,23 @@ textarea::placeholder {
         line-height: 1.5;
     }
 
+    .section-two {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .container-team {
+        width: 1440px;
+    }
+
     .list-our-team {
         flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .section-three {
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     .list-portfolio {
@@ -1206,10 +1295,6 @@ textarea::placeholder {
         width: calc((100% - 48px) / 3);
     }
 
-    .container-three {
-        height: 312px;
-    }
-
     .footer-container {
         margin-right: 120px;
     }
@@ -1218,18 +1303,24 @@ textarea::placeholder {
         margin-left: 80px;
     }
 
-        .menu-list {
-            display: none;
-        }
+    .menu-list {
+        display: none;
+    }
     
-        .navigation-list {
-            display: flex;
-        }
+    .navigation-list {
+        display: flex;
+    }
 
-        .container-three {
-           display: flex;
-           align-items: baseline;
-        }
+    .container-three {
+       display: flex;
+       align-items: baseline;
+       flex-wrap: nowrap;
+       justify-content: center;
+    }
+
+    .footer-form {
+        flex-wrap: nowrap;
+    }
 }
 
 /* ------------------- Dekstop adaptive --------------------------- */
