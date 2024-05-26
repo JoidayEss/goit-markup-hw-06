@@ -125,15 +125,16 @@ ul, ol {
 
 .title-text {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     text-align: center;
     color: #ffffff;
-    max-width: 496px;
+    max-width: 216px;
+    max-height: 160px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
 
 .title-button {
@@ -478,9 +479,9 @@ img {
     text-transform: uppercase;
     color: #4d5ae5;
     text-decoration: none;
-    margin-right: 76px;
+    justify-content: center;
     padding: 24px 0;
-    display: inline-block;
+    display: flex;
     margin-bottom: 16px;
 }
 
@@ -611,7 +612,7 @@ input {
 .footer-input {
     border: 1px solid #ffff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     font-weight: 400;
@@ -997,6 +998,8 @@ textarea::placeholder {
 .modal-container-menu {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;;
     z-index: 999;
@@ -1010,9 +1013,9 @@ textarea::placeholder {
 
 .modal-menu {
     background: #fff;
-    width: 320px;
-    height: 640px;
     overflow-y: 640px;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-button-menu {
@@ -1072,6 +1075,10 @@ textarea::placeholder {
     margin-left: 16px;
 }
 
+.container-team {
+    width: 296px;
+}
+
 /* ---------- Modal menu ----------- */
 
 /* --------- Mobile adaptive --------- */
@@ -1093,12 +1100,23 @@ textarea::placeholder {
 
 .menu-list {
     display: flex;
+    background-color: transparent;
     border: none;
 }
 
 /* ----------------- Tablet adaptive ------------------- */
 
 @media screen and (min-width: 768px) {
+
+    @media (min-resolution: 192dpi) {
+        .section-one {
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/Dark-bg2x.jpg);
+        }
+    }
+
     .container {
         max-width: 768px;
     }
@@ -1166,6 +1184,8 @@ textarea::placeholder {
        flex-direction: row;
        flex-wrap: wrap;
        width: 584px;
+       margin-left: 108px;
+       justify-content: flex-start;
    }
 
    .footer-subs-container {
@@ -1214,6 +1234,23 @@ textarea::placeholder {
    .footer-paragraph {
     text-align: left;
    }
+
+   .link {
+    justify-content: flex-start;
+   }
+
+   .footer-input {
+    margin-right: 24px;
+    width: 264px;
+   }
+
+   .adress-information {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+        color: #434455;
+   }
 }
 
 /* ------------------- Tablet adaptive ------------------ */
@@ -1222,6 +1259,16 @@ textarea::placeholder {
 /* ------------------- Dekstop adaptive ----------------------------- */
 
 @media screen and (min-width: 1158px) {
+
+    @media (min-resolution: 192dpi) {
+    .section-one {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+    url(../images/people-office2x.jpg);
+    }
+    }
+
     .container {
         max-width: 1158px;
         padding-left: 15px;
@@ -1237,8 +1284,8 @@ textarea::placeholder {
     }
 
     .section-one {
-        padding-bottom: 120px;
-        padding-top: 240px;
+        padding-bottom: 188px;
+        padding-top: 188px;
     }
 
     .section-four {
@@ -1295,10 +1342,6 @@ textarea::placeholder {
         width: calc((100% - 48px) / 3);
     }
 
-    .footer-container {
-        margin-right: 120px;
-    }
-
     .footer-subs-container {
         margin-left: 80px;
     }
@@ -1316,10 +1359,30 @@ textarea::placeholder {
        align-items: baseline;
        flex-wrap: nowrap;
        justify-content: center;
+       width: 1158px;
+       gap: unset;
+       margin-left: 0;
     }
 
     .footer-form {
         flex-wrap: nowrap;
+    }
+
+    .adress-information {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+
+    .title-text {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        max-width: 496px;
+        margin-bottom: 48px;
     }
 }
 
