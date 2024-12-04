@@ -1184,7 +1184,6 @@ textarea::placeholder {
        flex-direction: row;
        flex-wrap: wrap;
        width: 584px;
-       margin-left: 108px;
        justify-content: flex-start;
    }
 
@@ -1361,7 +1360,6 @@ textarea::placeholder {
        justify-content: center;
        width: 1158px;
        gap: unset;
-       margin-left: 0;
     }
 
     .footer-form {
